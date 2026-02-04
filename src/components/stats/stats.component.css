@@ -1,0 +1,23 @@
+.parallax{
+  min-height: 25vh;
+  background-image: var(--background-image-url);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.stats{
+  background: var(--background-glass-brighter);
+  border-radius: 2rem;
+  height: auto;
+  width: 350px;
+  transition: 0.5s;
+  font-size: var(--text-height-small);
+  .text-large{
+    font-size: clamp(2rem, 3rem, 6rem);
+  }
+  .text-header{
+    font-size: var(--header-text-height);
+  }
+}
+.stats:hover{
+  box-shadow: var(--box-shadow-hover);
+}

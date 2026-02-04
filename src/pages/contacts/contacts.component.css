@@ -1,0 +1,14 @@
+.page{
+  min-height: 20vh;
+  .text-header{
+    font-size: var(--header-text-height);
+  }
+  .muted{
+    border-radius: 0.5rem;
+    opacity: 0.7;
+  }
+  .muted:hover{
+    opacity: 1;
+    scale: 1;
+  }
+}

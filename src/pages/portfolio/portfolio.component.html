@@ -1,0 +1,55 @@
+<div class="page d-flex">
+  <div class="backdrop z-1"></div>
+  <div class="flex-wrap z-2 container">
+    <div>
+      <div class="d-flex justify-content-center">
+        <i class="bi bi-pc-display bar-icon"></i>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="bar"></div>
+      </div>
+      <div class="w-100 text-center text-white text-header user-select-none">
+        {{l.tr('Портфолио')}}
+      </div>
+    </div>
+    <div class="mt-4 d-flex gap-4 justify-content-center flex-wrap row container">
+      @for (project of projects; track project) {
+        <div class="project p-2 col-md-3 d-flex flex-column">
+          <div class="mt-2 header d-flex justify-content-center user-select-none">
+            {{ project.title }}
+          </div>
+          <div class="d-flex h-100 flex-column justify-content-center">
+            <div class="d-flex h-100 justify-content-center">
+              @if (project.video){
+                <video #player [src]="project.video" [controls]="project.controls" height="100%" width="100%" (mouseenter)="startPlay(player, project)" (mouseleave)="stopPlay(player, project)" loop [muted]="true"></video>
+              }
+              @else{
+                {{l.tr('НЕТ ВИДЕО')}}
+              }
+            </div>
+            <div class="d-flex h-100 justify-content-center align-items-center">
+              @if (project.details){
+                <div class="flex-column description">
+                  <div class="text-center mt-2">
+                    @if (l.lang == 'ru') {
+                      {{project.details}}
+                    } @else {
+                      {{project.detailsEng}}
+                    }
+                  </div>
+                  <div class="text-center my-2"><i class="bi h4 bi-cpu"></i></div>
+                  <div class="text-center">
+                    <div class="ms-2">{{project.technologies}}</div>
+                  </div>
+                </div>
+              }
+              @else{
+                {{l.tr('ОПИСАНИЕ')}}
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

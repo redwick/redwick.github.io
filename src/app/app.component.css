@@ -1,0 +1,113 @@
+.home{
+  background-image: var(--background-image-url);
+  background-size: cover;
+  .backdrop{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+}
+.menu{
+  height: var(--menu-height);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  top: 0;
+  .personal{
+    font-size: var(--header-text-height);
+    border-radius: 0.5rem;
+    background: var(--background-hover);
+    transition: 0.5s;
+  }
+  .personal:hover{
+    box-shadow: var(--box-shadow-hover);
+  }
+  .toggle-button{
+    height: 3rem;
+    width: 3rem;
+  }
+}
+.center-info{
+  --header-text-height: clamp(28px, 1.8vw, 48px);
+  --text-height: clamp(14px, 1.2vw, 28px);
+  position: relative;
+  width: clamp(300px, 28vw, 800px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  background: var(--background-glass);
+  font-size: var(--text-height);
+  .blinking-stick{
+    width: 2px;
+    height: var(--header-text-height);
+    background-color: white;
+  }
+  .text-typing{
+    height: var(--header-text-height);
+  }
+  &.picture{
+    width: clamp(200px, 16vw, 400px);;
+  }
+  .text-header{
+    font-size: var(--header-text-height);
+  }
+  transition: 0.5s;
+}
+.center-info:hover{
+  box-shadow:
+    0 0 5px var(--primary-color),
+    0 0 10px var(--primary-color),
+    0 0 20px var(--primary-color),
+    0 0 40px var(--primary-color);
+}
+.profile-picture{
+  width: 100%;
+  height: auto;
+}
+.mobile-menu{
+  position: fixed;
+  transform: translateX(100%);
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+}
+.lang-switcher {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+
+  .lang-item {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+    font-size: 1.1rem;
+    color: white;
+
+    &:hover {
+      opacity: 0.8;
+      text-shadow: 0 0 5px var(--primary-color);
+    }
+
+    &.active {
+      opacity: 1;
+      color: var(--primary-color);
+      text-shadow: var(--box-shadow-hover);
+    }
+  }
+
+  .separator {
+    width: 1px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+}

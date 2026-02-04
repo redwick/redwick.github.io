@@ -1,0 +1,26 @@
+.page{
+  .project{
+    height: 400px;
+    width: 300px;
+    border-radius: 2rem;
+    background: var(--background-glass-brighter);
+    transition: 0.5s;
+    font-size: var(--text-height-small);
+    .image{
+      width: 50%;
+      height: auto;
+    }
+    .text{
+      font-weight: 500;
+    }
+    .header{
+      font-size: var(--header-text-height);
+    }
+    .description{
+      font-size: var(--text-height-xsmall);
+    }
+  }
+  .project:hover{
+    box-shadow: var(--box-shadow-hover);
+  }
+}

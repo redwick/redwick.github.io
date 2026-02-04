@@ -1,0 +1,23 @@
+.parallax{
+  height: 22vh;
+  background-image: var(--background-image-url);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.logo{
+  height: 17vh;
+  width: 16vh;
+  border-radius: 2rem;
+  background: var(--background-glass-brighter);
+  transition: 0.5s;
+  .image{
+    width: 50%;
+    height: auto;
+  }
+  .text{
+    font-weight: 500;
+  }
+}
+.logo:hover{
+  box-shadow: var(--box-shadow-hover);
+}

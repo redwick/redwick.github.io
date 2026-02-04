@@ -1,0 +1,25 @@
+<div class="parallax d-flex align-items-center">
+  <div class="my-auto vw-100 overflow-hidden">
+    <om-marquee
+      [animationDuration]="getDuration()"
+      [marqueeGap]="'3rem'"
+      [pauseOnHover]="true"
+      styleClass="custom-marquee"
+    >
+      @for (marquee of marquees; track marquee){
+        <div class="logo my-2" #OmMarqueeContent>
+          <div class="d-flex flex-column justify-content-center h-100">
+            <div class="my-2 d-flex justify-content-center">
+              <img class="image" [src]="marquee.image"/>
+            </div>
+            <div class="text my-2 d-flex justify-content-center">
+              {{marquee.text}}
+            </div>
+          </div>
+
+        </div>
+      }
+    </om-marquee>
+  </div>
+</div>
+

@@ -1,0 +1,47 @@
+@if (skills){
+  <div class="page">
+    <div class="backdrop z-1"></div>
+    <div class="z-2 position-relative">
+      <div>
+        <div class="d-flex justify-content-center">
+          <i class="bi bi-book bar-icon"></i>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="bar"></div>
+        </div>
+        <div class="w-100 text-center text-white text-header user-select-none">
+          {{ l.tr('Мои навыки') }}
+        </div>
+        <div class="pt-3 d-flex justify-content-center">
+          @for (type of skillTypes; track type) {
+            <div (click)="selectType(type)" class="button d-flex align-items-center skill-type cursor-pointer text-center mx-2 px-4 user-select-none" [class.active]="type === selectedType">
+              {{l.tr(formatSkill(type))}}
+            </div>
+          }
+        </div>
+      </div>
+      <div class="container">
+        <div class="row g-3 mt-3">
+          @for (skill of getSkills(selectedType); track skill.name; let index = $index) {
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card p-3">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h6 class="text-white mb-1">{{ skill.name }}</h6>
+                  <span class="badge-level" [attr.data-level]="skill.levelText">
+                    {{ skill.levelText }}
+                  </span>
+                </div>
+                <i class="bi bi-cpu text-muted"></i>
+              </div>
+              <div class="mini-progress-bg mt-3">
+                <ngb-progressbar class="mini-progress-fill" [value]="progress[index]" />
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+}
