@@ -4,7 +4,7 @@ body {
   --primary-color: #3DAEE9;
   --background-color-primary: #031329;
   --background-color-secondary: #02406a;
-  --header-text-height: clamp(28px, 2.5vw, 42px);
+  --header-text-height: clamp(20px, 2.5vw, 42px);
   --text-height: clamp(16px, 1.2vw, 28px);
   --text-height-small: clamp(16px, 1vw, 20px);
   --text-height-xsmall: clamp(16px, 1vw, 16px);
