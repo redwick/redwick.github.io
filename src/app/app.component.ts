@@ -215,10 +215,10 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   protected openResume() {
     if (this.l.lang == 'ru'){
-      window.open('/Исаев_Богдан.pdf','_blank');
+      window.open('/cv/Исаев_Богдан.pdf','_blank');
     }
     else {
-      window.open('/Isaev_Bogdan.pdf','_blank');
+      window.open('/cv/Isaev_Bogdan.pdf','_blank');
     }
   }
 }

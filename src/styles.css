@@ -15,7 +15,7 @@ body {
   --progress-color-light: linear-gradient(90deg, #bababa, #d6d6d6);
   --progress-color: linear-gradient(90deg, #007bff, #00ffcc);
   --primart-text-color: #ffffff;
-  --background-image-url: url('/background.jpg');
+  --background-image-url: url('/cv/background.jpg');
   --box-shadow-hover: 0 0 5px var(--primary-color),
                       0 0 8px var(--primary-color),
                       0 0 12px var(--primary-color),

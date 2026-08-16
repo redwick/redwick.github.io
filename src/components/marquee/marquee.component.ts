@@ -12,7 +12,7 @@ import {Marquee} from '../../classes/marquee';
   styleUrl: './marquee.component.css'
 })
 export class MarqueeComponent {
-  path = '/logo/';
+  path = '/cv/logo/';
   marquees: Marquee[] = [
     new Marquee(this.path + 'angular.png', 'Angular'),
     new Marquee(this.path + 'bootstrap.png', 'Bootstrap'),
